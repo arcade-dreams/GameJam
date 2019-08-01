@@ -804,6 +804,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8811633104011490146, guid: 38e7d91f308e3e94dab935eaf0182eb5,
+        type: 3}
+      propertyPath: m_Text
+      value: Use
+      objectReference: {fileID: 0}
     - target: {fileID: 8811633104011490147, guid: 38e7d91f308e3e94dab935eaf0182eb5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -813,11 +818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8811633104011490146, guid: 38e7d91f308e3e94dab935eaf0182eb5,
-        type: 3}
-      propertyPath: m_Text
-      value: Use
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e7d91f308e3e94dab935eaf0182eb5, type: 3}
@@ -1401,8 +1401,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2125993550}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 2125993527}
@@ -5162,6 +5161,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8811633104011490146, guid: 38e7d91f308e3e94dab935eaf0182eb5,
+        type: 3}
+      propertyPath: m_Text
+      value: Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 8811633104011490147, guid: 38e7d91f308e3e94dab935eaf0182eb5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5176,11 +5180,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8811633104011490146, guid: 38e7d91f308e3e94dab935eaf0182eb5,
-        type: 3}
-      propertyPath: m_Text
-      value: Pick Up
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e7d91f308e3e94dab935eaf0182eb5, type: 3}
