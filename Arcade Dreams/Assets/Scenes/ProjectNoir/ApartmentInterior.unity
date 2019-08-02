@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 756968607}
   - component: {fileID: 756968606}
   - component: {fileID: 756968605}
-  - component: {fileID: 756968604}
   - component: {fileID: 756968602}
   - component: {fileID: 756968598}
   - component: {fileID: 756968597}
@@ -239,6 +238,7 @@ GameObject:
   - component: {fileID: 756968626}
   - component: {fileID: 756968625}
   - component: {fileID: 756968624}
+  - component: {fileID: 756968627}
   m_Layer: 0
   m_Name: Dialogue 1
   m_TagString: Untagged
@@ -342,16 +342,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 162
     y: 78.26582
-    width: 161.3924
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
-  blockName: Sit your ass down
+  blockName: Elusive
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 756968604}
   - {fileID: 756968596}
   - {fileID: 756968608}
   - {fileID: 756968606}
@@ -380,7 +379,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 756968611}
+  - {fileID: 756968605}
   selectedCommands: []
   variables: []
   description: 
@@ -462,33 +461,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 756968623}
   - {fileID: 756968626}
---- !u!114 &756968604
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756968595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 7
-  indentLevel: 0
-  storyText: Sit your ass down.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &756968605
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -944,6 +916,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 756968617}
   commandList:
+  - {fileID: 756968627}
   - {fileID: 756968621}
   - {fileID: 756968620}
   - {fileID: 756968619}
@@ -1050,6 +1023,51 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &756968627
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756968595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 2104662437}
+  targetComponentAssemblyName: MoveOnClick, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MoveOnClick
+  targetMethod: ShouldGetInput
+  targetMethodText: 'ShouldGetInput (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &818621052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1728884330}
+  selectedFlowchart: {fileID: 756968600}
 --- !u!4 &840158431
 Transform:
   m_ObjectHideFlags: 1
@@ -1356,6 +1374,8 @@ GameObject:
   - component: {fileID: 1038892575}
   - component: {fileID: 1038892574}
   - component: {fileID: 1038892592}
+  - component: {fileID: 1038892591}
+  - component: {fileID: 1038892590}
   m_Layer: 0
   m_Name: Dialogue 2
   m_TagString: Untagged
@@ -1594,8 +1614,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1038892591}
+  selectedCommands:
+  - {fileID: 1038892590}
   variables: []
   description: 
   stepPause: 0
@@ -1847,6 +1869,77 @@ MonoBehaviour:
   - {fileID: 1038892576}
   - {fileID: 1038892575}
   - {fileID: 1038892592}
+--- !u!114 &1038892590
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038892570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 2104662437}
+  targetComponentAssemblyName: MoveOnClick, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MoveOnClick
+  targetMethod: ShouldGetInput
+  targetMethodText: 'ShouldGetInput (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1038892591
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038892570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 578.0164
+    y: 114.709045
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 21
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1038892590}
 --- !u!114 &1038892592
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1863,7 +1956,7 @@ MonoBehaviour:
   indentLevel: 0
   text: Fine. Coffee it is.
   description: 
-  targetBlock: {fileID: 0}
+  targetBlock: {fileID: 1038892591}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
