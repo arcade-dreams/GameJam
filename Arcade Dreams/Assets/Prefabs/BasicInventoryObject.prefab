@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 803110838387687125}
   - component: {fileID: 5294010575586704036}
   - component: {fileID: 42777225138019348}
+  - component: {fileID: 7507728301103231406}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -308,7 +309,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 3461298251188447047}
   selectedCommands:
-  - {fileID: 42777225138019348}
+  - {fileID: 7507728301103231406}
   variables:
   - {fileID: 4342424455813884962}
   - {fileID: 1838134706160307876}
@@ -348,6 +349,7 @@ MonoBehaviour:
   eventHandler: {fileID: 752871178754727743}
   commandList:
   - {fileID: 8796655468146524139}
+  - {fileID: 7507728301103231406}
   - {fileID: 2064986012120885514}
   - {fileID: 7491067587924313397}
   - {fileID: 1071808305636903633}
@@ -1517,3 +1519,68 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: ClearAll
   messageOLD: 
+--- !u!114 &7507728301103231406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461298251188447041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 62
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+BooleanEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+IntegerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Fungus.InvokeEvent+StringEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
