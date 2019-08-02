@@ -23,39 +23,51 @@ public class AnimController : MonoBehaviour
         if (distance > walkDistance)
         {
             animator.SetBool("Walking", true);
-        }else
+            if (Mathf.Abs(targetPos.x - pos.x) > Mathf.Abs(targetPos.y - pos.y))
+            {
+                animator.SetBool("Horizontal", true);
+                if (targetPos.x > pos.x)
+                {
+                    RotateSprite(true);
+                    animator.SetBool("Right", true);
+                }
+                else
+                {
+                    RotateSprite(false);
+                    animator.SetBool("Right", false);
+                }
+            }
+            else
+            {
+                RotateSprite(true);
+                animator.SetBool("Horizontal", false);
+                if (targetPos.y > pos.y)
+                {
+                    animator.SetBool("Up", true);
+                }
+                else
+                {
+                    animator.SetBool("Up", false);
+                }
+            }
+        }
+        else
         {
             animator.SetBool("Walking", false);
         }
-        if (Mathf.Abs(targetPos.x - pos.x) > Mathf.Abs(targetPos.y - pos.y))
+    }
+
+    void RotateSprite(bool right)
+    {
+        Vector3 scale = transform.localScale;
+        if ((scale.x < 0 && right) || (scale.x > 0 && !right))
         {
-            animator.SetBool("Horizontal", true);
-            if (targetPos.x > pos.x)
-            {
-                animator.SetBool("Right", true);
-                animator.SetBool("Left", false);
-            }
-            else
-            {
-                animator.SetBool("Right", false);
-                animator.SetBool("Left", true);
-            }
-        }else
-        {
-            animator.SetBool("Horizontal", false);
-            if (targetPos.y > pos.y)
-            {
-                animator.SetBool("Up", true);
-                animator.SetBool("Down", false);
-            }
-            else
-            {
-                animator.SetBool("Up", false);
-                animator.SetBool("Down", true);
-            }
+            scale.x *= -1;
         }
+        transform.localScale = scale;
     }
         
 }
+
 
 
