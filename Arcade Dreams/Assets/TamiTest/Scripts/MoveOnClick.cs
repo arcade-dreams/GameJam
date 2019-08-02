@@ -8,7 +8,8 @@ public class MoveOnClick : MonoBehaviour
     public float maxZ = -3;
     private Vector3 target;
     public List<Collider> levelColliders;
-    // Start is called before the first frame update
+    bool getInput = true;
+    float inputSuppressTimer = 0.0f;
     void Start()
     {
         
@@ -17,7 +18,8 @@ public class MoveOnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        inputSuppressTimer -= Time.deltaTime;
+        if(Input.GetMouseButtonDown(0) && getInput == true && inputSuppressTimer < 0)
         {
             Vector3 screenPos = Input.mousePosition;
             //screenPos.z = Camera.main.nearClipPlane;
@@ -65,6 +67,16 @@ public class MoveOnClick : MonoBehaviour
         Vector3 closest = c.ClosestPoint(point);
         closest.z = point.z;
         return closest == point;
+    }
+
+    public void ShouldGetInput(bool shouldGetInput)
+    {
+        getInput = shouldGetInput;
+    }
+
+    public void SuppressInput()
+    {
+        inputSuppressTimer = 1.0f;
     }
 }
 
