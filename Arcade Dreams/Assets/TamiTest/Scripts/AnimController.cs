@@ -27,6 +27,33 @@ public class AnimController : MonoBehaviour
         {
             animator.SetBool("Walking", false);
         }
+        if (Mathf.Abs(targetPos.x - pos.x) > Mathf.Abs(targetPos.y - pos.y))
+        {
+            animator.SetBool("Horizontal", true);
+            if (targetPos.x > pos.x)
+            {
+                animator.SetBool("Right", true);
+                animator.SetBool("Left", false);
+            }
+            else
+            {
+                animator.SetBool("Right", false);
+                animator.SetBool("Left", true);
+            }
+        }else
+        {
+            animator.SetBool("Horizontal", false);
+            if (targetPos.y > pos.y)
+            {
+                animator.SetBool("Up", true);
+                animator.SetBool("Down", false);
+            }
+            else
+            {
+                animator.SetBool("Up", false);
+                animator.SetBool("Down", true);
+            }
+        }
     }
         
 }
