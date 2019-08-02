@@ -1125,8 +1125,6 @@ GameObject:
   - component: {fileID: 1038892575}
   - component: {fileID: 1038892574}
   - component: {fileID: 1038892592}
-  - component: {fileID: 1038892591}
-  - component: {fileID: 1038892590}
   m_Layer: 0
   m_Name: Dialogue 2
   m_TagString: Untagged
@@ -1365,8 +1363,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1038892591}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -1619,59 +1616,6 @@ MonoBehaviour:
   - {fileID: 1038892576}
   - {fileID: 1038892575}
   - {fileID: 1038892592}
---- !u!114 &1038892590
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038892570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 22
-  indentLevel: 0
-  storyText: End of dialogue.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1038892591
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038892570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 565.645
-    y: 98.21431
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 21
-  blockName: End
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1038892590}
 --- !u!114 &1038892592
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1688,7 +1632,7 @@ MonoBehaviour:
   indentLevel: 0
   text: Fine. Coffee it is.
   description: 
-  targetBlock: {fileID: 1038892591}
+  targetBlock: {fileID: 0}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -1854,6 +1798,7 @@ GameObject:
   - component: {fileID: 1728884327}
   - component: {fileID: 1728884351}
   - component: {fileID: 1728884350}
+  - component: {fileID: 1728884352}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1931,7 +1876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 9.142551, y: 7.4110055}
+  scrollPos: {x: 6.1425476, y: -3.588997}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -1944,8 +1889,10 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1728884351}
-  selectedCommands:
-  - {fileID: 1728884350}
+  - {fileID: 1728884344}
+  - {fileID: 1728884340}
+  - {fileID: 1728884329}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2391,6 +2338,24 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1728884350}
+  - {fileID: 1728884352}
+--- !u!114 &1728884352
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728884326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: e7375681b4c9773499c8b50aa3d79795, type: 3}
+  volume: 1
+  waitUntilFinished: 0
 --- !u!1 &1771533288
 GameObject:
   m_ObjectHideFlags: 0
