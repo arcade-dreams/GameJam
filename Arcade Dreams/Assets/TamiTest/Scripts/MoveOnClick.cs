@@ -10,17 +10,20 @@ public class MoveOnClick : MonoBehaviour
     public List<Collider> levelColliders;
     bool getInput = true;
     float inputSuppressTimer = 0.0f;
+    //hack
+    bool clickedLastFrame = false;
     void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         inputSuppressTimer -= Time.deltaTime;
-        if(Input.GetMouseButtonDown(0) && getInput == true && inputSuppressTimer < 0)
+        if(clickedLastFrame && getInput == true && inputSuppressTimer < 0)
         {
+            clickedLastFrame = false;
             Vector3 screenPos = Input.mousePosition;
             //screenPos.z = Camera.main.nearClipPlane;
             screenPos.z = maxZ - Camera.main.transform.position.z;
@@ -61,6 +64,8 @@ public class MoveOnClick : MonoBehaviour
             }
             transform.position = target;
         }
+        if (Input.GetMouseButtonDown(0))
+            clickedLastFrame = true;
     }
     bool IsInside(Collider c, Vector3 point)
     {
